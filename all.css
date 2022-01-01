@@ -1,151 +1,629 @@
-<!DOCTYPE html>
-<html lang="en">
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="favicon.ico">
-    <meta name='description' content='網站描述文字' />
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* wrap */
 
-    <meta property="og:title" content="FB的標題" />
-    <meta property="og:description" content="FB的描述">
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="FB上的網址" />
-    <meta property="og:image" content="FB的圖片" />
-    <link rel="stylesheet" href="css/all.css">
-    <title>多頁式網站</title>
-</head>
+.wrap{
+    width: 1024px;
+    margin: 0 auto;
+   
+}
 
-<body>
-    <div class="wrap">
-        <div class="header">
-            <div class="nav">
-                <h1><a href="#">hex school</a></h1>
-                <div class="nav-menu">
-                    <ul>
-                        <li><a href="index.html">首頁</a></li>
-                        <li><a href="course.html">課程</a></li>
-                        <li><a href="qa.html">問答</a></li>
-                    </ul>
-                </div>
-            </div>
+/* header */
+.header{
+  background-image: url(../img/bg_index.png);
+  height: 560px;
+  
+}
+.header .nav{
+  background-color:rgba(56, 56, 56,0.7);
+    display: flex;
+    color: #fff;
+}
+.header .nav .nav-menu ul{
+    display: flex;
+}
 
-            <div class="banner">
+.header .nav{
+   justify-content: space-between;
+   align-items: center;
+   padding:0px 35px;
+}
+.header .nav h1 a{
+    background-image: url(../img/logo.png);
+    width: 182px;
+    height: 36px;
+    display: block;
+    text-indent: 101%;
+    overflow: hidden;
+white-space: nowrap;
+margin: 12px 0px;
+}
 
-                <h2>歡迎來到<span>六角學院</span></h2>
-                <h2>帶你一起攻略前端設計</h2>
-                <a href="#data" class=" hvr-wobble-vertical">
-                    <buttom>馬上去註冊 <div class="banner-text">➜</div>
-                    </buttom>
-                </a>
+.header .nav-menu a{   
+  display:block;
+ padding: 20px 10px;
+    margin-left: 40px;
+    text-decoration: none;
+    color: #fff;    
+}
+.header .nav-menu a:hover{   
+color: #00cc99;
+border-bottom: 4px solid #00cc99;
+}
+/* footer */
 
-            </div>
+.footer{
+    background: #323228;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:26px 30px;
+}
+.footer .logo img{
+    margin-bottom: 5px;
+}
+.footer .logo h2{
+    color: gray;
+    margin-left: 35px;
+    font-size: 18px;
+}
+.footer .footer-menu{
+    display: flex;
+}
+.footer .footer-menu li{
+    margin-left: 16px;
+}
 
-        </div>
-        <div class="content-index">
-
-            <div class="course">
-                <div class="main-top">
-                    <div class="main-text">
-                        <h2>精選課程</h2>
-                        <h3>幫助你拿到前端工程師的門票</h3>
-                    </div>
-
-                    <a href="#">更多課程</a>
-                </div>
-                <ul class="item">
-                    <li class=" hvr-wobble-vertical"><img src="/img/html5.png" alt="html5">
-                        <h2>Html 5 基礎教學</h2>
-                        <p>主流前端網站設計的基礎，透過實際的範例，瞭解正確的網站開發流程。</p>
-                    </li>
-
-                    <li class=" hvr-wobble-vertical"><img src="/img/rwd.png" alt="rwd">
-                        <h2>響應式網站設計</h2>
-                        <p>六角學院提供業界響應式開發方法，讓學生瞭解完善的行動版開發觀念。</p>
-                    </li>
-                    <li class=" hvr-wobble-vertical"><img src="/img/jQuery.png" alt="jQuery">
-                        <h2>jQuery 實戰教學</h2>
-                        <p>分為四大主題:變數的使用、操作DOM、基本數學運算和套件運用。</p>
-                    </li>
-                </ul>
-            </div>
-            <div class="compare">
-                <h2>課程比較</h2>
-                <h3>線上課程與實體課程差異</h3>
-                <table class="compare-table">
-                    <tr>
-                        <th class="compare-text">項目</th>
-                        <th class="compare-th compare-w">六角學院 線上課程</th>
-                        <th class="compare-th compare-w">一般線上課程</th>
-                        <th class="compare-th ">一般實體課程</th>
-                    </tr>
-                    <tr>
-                        <td class="compare-text">費用</td>
-                        <td class="compare-color">較低</td>
-                        <td class="compare-color">較低</td>
-                        <td>較高</td>
-                    </tr>
-                    <tr>
-                        <td class="compare-text">學習效果</td>
-                        <td>一般</td>
-                        <td>較低</td>
-                        <td class="compare-color">很好</td>
-                    </tr>
-                    <tr>
-                        <td class="compare-text">Code review</td>
-                        <td class="compare-color">有</td>
-                        <td>無</td>
-                        <td>不一定</td>
-                    </tr>
-                    <tr>
-                        <td class="compare-text">課程更新速度</td>
-                        <td class="compare-color">普通</td>
-                        <td class="compare-color">普通</td>
-                        <td>較慢</td>
-                    </tr>
-                    <tr>
-                        <td class="compare-text">多次複習</td>
-                        <td class="compare-color">可</td>
-                        <td class="compare-color">可</td>
-                        <td>不可</td>
-                    </tr>
-                    <tr>
-                        <td class="compare-text">字幕</td>
-                        <td class="compare-color">有</td>
-                        <td>不一定</td>
-                        <td>板書</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="message">
-                <h2>你就是六角的下一位學生!<br>
-                    快留下資料讓我們認識你吧
-                </h2>
-
-                <form id="data" action="index.html">
-                    <input type="text" name="name" placeholder="你的名字是?">
-                    <input type="text" name="mail" placeholder="example@mail.com.tw">
-                    <input type="submit" value="送出" class="hvr-wobble-vertical">
-                </form>
+/* footer-menu hover */
+@-webkit-keyframes hvr-wobble-vertical {
+    16.65% {
+      -webkit-transform: translateY(8px);
+      transform: translateY(8px);
+    }
+    33.3% {
+      -webkit-transform: translateY(-6px);
+      transform: translateY(-6px);
+    }
+    49.95% {
+      -webkit-transform: translateY(4px);
+      transform: translateY(4px);
+    }
+    66.6% {
+      -webkit-transform: translateY(-2px);
+      transform: translateY(-2px);
+    }
+    83.25% {
+      -webkit-transform: translateY(1px);
+      transform: translateY(1px);
+    }
+    100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+  }
+  @keyframes hvr-wobble-vertical {
+    16.65% {
+      -webkit-transform: translateY(8px);
+      transform: translateY(8px);
+    }
+    33.3% {
+      -webkit-transform: translateY(-6px);
+      transform: translateY(-6px);
+    }
+    49.95% {
+      -webkit-transform: translateY(4px);
+      transform: translateY(4px);
+    }
+    66.6% {
+      -webkit-transform: translateY(-2px);
+      transform: translateY(-2px);
+    }
+    83.25% {
+      -webkit-transform: translateY(1px);
+      transform: translateY(1px);
+    }
+    100% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+    }
+  }
+  .hvr-wobble-vertical {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  }
+  .hvr-wobble-vertical:hover, .hvr-wobble-vertical:focus, .hvr-wobble-vertical:active {
+    -webkit-animation-name: hvr-wobble-vertical;
+    animation-name: hvr-wobble-vertical;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+  }
 
 
-            </div>
-        </div>
-        <div class="footer">
-            <div class="logo"> <img src="/img/logo.png" alt="logo">
-                <h2>©2018 hexschool</h2>
-            </div>
+/* header banner */
 
-            <ul class="footer-menu">
-                <li><a href="#" title="fb" class="hvr-wobble-vertical "><img src="/img/fb.png" alt="fb"></a></li>
-                <li><a href="#" title="twitter" class="hvr-wobble-vertical "><img src="/img/tw.png" alt="twitter"></a>
-                </li>
-                <li><a href="#" title="ig" class="hvr-wobble-vertical "><img src="/img/ig.png" alt="ig"></a></li>
-            </ul>
-        </div>
-    </div>
+.header .banner{  
+  padding: 122px 30px 100px 30px;
+ 
+}
+.header .banner h2{
+  color:#00cc99;
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+.header .banner span{
+  color:#fff;
+}
 
-</body>
 
-</html>
+.header .banner a{
+display: inline-block;
+  width: 170px;
+ background: #00cc99;
+  color: #fff;
+  border-radius: 6px ;
+  text-decoration: none;
+  margin-top: 10px;
+  padding: 14px 20px 12px 35px;
+  font-size: 18px;
+  letter-spacing: 1px;
+ font-weight: bold;
+}
+.header .banner .banner-text{
+  margin-left: 43px; 
+  display: inline;
+}
+
+
+/* content-index  */
+
+.content-index .course,.compare{
+    padding: 45px 40px;
+}
+.content-index .course .main-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content-index .course .main-top h2,.compare h2{
+    color: #00cc99;
+    font-weight: bold;  
+    font-size: 37px;
+}
+.content-index .course .main-top h3{
+    color: gray;
+    font-size: 20px;
+    margin-top: 15px;
+    margin-left: 8px;
+ }
+ .content-index .course .main-top .main-text{
+    display: flex;
+    margin-bottom: 15px;    
+}
+.content-index .course .main-top a{
+    display: block;
+    font-weight: bold;
+    height: 18px;
+    padding: 3px 8px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #00cc99;
+    border:3px solid #00cc99 ;
+}
+.content-index .course .main-top a:hover{
+    background: #00cc99;
+    color: #fff;
+}
+.content-index .course .item{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.content-index .course .item li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:20px 20px;
+    box-shadow: 1px 2px 4px #c3bdbd;
+    margin-right: 15px;
+}
+.content-index .course .item li img,.course .item li h2{
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+.content-index .course .item li p,.compare h3{
+    color:#afafaf;
+}
+.content-index .course .item li p,.course .item li h2{
+    font-family:Verdana ;
+}
+
+
+
+
+
+.content-index .compare h3,.compare h2{
+    display: inline;
+}
+
+.content-index .compare .compare-table{
+    text-align: center;
+    margin-top: 25px;
+    font-weight: bold;
+}
+.content-index .compare-table  th,td{
+    padding: 14px 20px;
+}
+
+.content-index .compare-table th{
+margin-right: 10px;
+}
+.content-index .compare h3{
+  margin-left: 8px;
+  font-size: 20px;
+}
+.content-index .compare-table th{  
+  background: #ebebeb;
+}
+.content-index .compare-table .compare-text{
+  width: 100px;
+}
+
+.content-index .compare-table .compare-color{
+  color:#00cc99;
+}
+.content-index .compare-table .compare-w{
+  width: 285px;
+}
+
+/* message */
+
+.content-index .message{
+  display: flex;
+  justify-content: space-between;
+  padding: 100px 40px 40px 40px;
+  background: #ebebeb;
+}
+.content-index .message h2{
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1.5 ;
+}
+.content-index .message #data{
+  display: flex;
+  flex-direction: column;
+}
+.content-index .message #data input{
+  display:block;
+  width: 400px;
+  font-size: 18px;
+  padding:  10px;
+  margin-bottom:10px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+.content-index .message #data input[type="submit"]{
+ width:115px;
+ padding: 6px 0px;
+ align-self:flex-end;
+ background: #00cc99;
+ color:#fff;
+ cursor: pointer;
+}
+
+
+/*header course-nav */
+.course-nav{
+  background-image: url(../img/bg_course.png);
+
+}
+.course-nav .banner{
+  position: relative;
+  padding: 146px 35px 100px 46px;
+}
+
+.course-nav .banner h2{
+font-size: 40px;
+color:#fff;
+letter-spacing: 4px;
+}
+
+.course-nav .banner span{
+font-size: 23px;
+color: #00cc99;
+letter-spacing: normal;
+}
+.course-nav .banner .logo{
+  position:absolute;
+  top:47px;
+  right:55px;
+}
+
+
+/*  .content-course */
+.content-course {
+  padding: 50px 160px 50px 210px;
+}
+.content-course .teacher{
+  display: flex; 
+  align-items: center;
+}
+.content-course .teacher h2{
+  font-size:34px;
+  color: #00cc99;
+ line-height: 1.5;
+ font-weight: bold;
+ margin-right: 60px;
+ margin-left: 30px;
+}
+.content-course .teacher span{
+ color:#000;
+}
+.content-course .teacher ul{
+  margin-top: 20px;
+}
+.content-course .teacher li{
+  list-style-type:disc;
+  color:#afafaf;
+  margin-bottom: 5px;
+ padding-left: 20px;
+ font-weight: bold;
+}
+
+.content-course .compare {
+  padding: 60px 0px;
+}
+
+.content-course .compare span{
+  color:#afafaf;
+  font-size: 20px;
+}
+.content-course .compare ol{
+ list-style-type:decimal;
+ margin-top:20px;
+ margin-left: 20px;
+ font-weight: bold;
+ line-height: 1.3;
+}
+
+.content-course .compare ol li{
+margin-bottom: 5px;
+color: #404032;
+padding: 1px 15px;
+}
+
+.content-course .learn h2{
+  color: #00cc99;
+  font-size: 34px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.content-course .learn span{
+  color: #afafaf;
+  font-size: 20px;
+}
+.content-course .learn .learn-head{
+  background: #ebebeb; 
+  font-weight: bold;
+}
+.content-course .learn .learn-text{
+color:#afafaf;
+font-weight: bold;
+}
+.content-course .learn .learn-head,.learn .learn-text{
+  padding: 14px 0px 14px 30px;
+}
+
+
+.joinus{
+  background: #ebebeb;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 140px 115px 140px 178px;
+}
+.joinus h2{
+  font-size:35px;
+  line-height: 1.5;
+  font-weight: bold;
+}
+.joinus a{
+  display: inline-block;
+  width: 170px;
+ background: #00cc99;
+  color: #fff;
+  border-radius: 6px ;
+  text-decoration: none;
+  padding: 17px 13px 17px 30px;
+  font-size: 18px;
+  letter-spacing: 1px; 
+ font-weight: bold;
+ margin-top: 45px;
+}
+.joinus div{
+  display: inline-block;
+  margin-left: 25px;
+}
+
+
+/* header qa */
+.qa{
+  background-image: url(../img/bg_QA.png);
+}
+.qa .main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding:130px 180px; 
+}
+
+.qa .main h2{
+  font-size: 50px;
+  color: #fff;
+text-align: center;
+margin-bottom: 30px;
+}
+.qa .main h2 span{
+  color:#00cc99;
+font-size:25px;
+}
+.qa .main input[type="text"]{
+  background: url(../img/search.png)  no-repeat 98%  #fff ;   
+  background-size:23px 23px;
+  width: 600px;   
+border-radius:7px;
+font-size: 30px;
+}
+
+/* content-qa */
+.content-qa{
+  padding: 45px 114px;
+}
+.content-qa .qa-text{
+  margin:50px 0px 25px 0px ;
+}
+.content-qa h2,.content-qa h3{
+  display: inline;
+}
+.content-qa h2{ 
+  color: #00cc99;
+  font-size: 45px;
+  font-weight: bold;
+  
+}
+.content-qa h3{  
+  color: #afafaf; 
+  margin-left:15px;
+}
+.content-qa h3,h4{
+  font-size: 23px;
+}
+.content-qa h4{
+  font-weight: bold;
+  margin-bottom: 5px;
+  
+}
+.content-qa p{
+  color: gray;
+  line-height: 1.5;
+  letter-spacing:0.5px;
+  margin: 5px 0px 25px 0px;
+}
+.content-qa .qa-menu{
+ margin: 0px 0px;
+}
+.content-qa p a{
+  text-decoration: none;
+  color: #00cc99;
+  
+}
+.content-qa ul,ol{
+  color: gray;
+  margin-left: 26px;
+  padding-left: 15px;
+}
+.content-qa ul{
+  list-style-type: disc;
+}
+.content-qa ol{
+  list-style-type:decimal;
+}
+.content-qa h5{
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.content-qa ul li,ol li{ 
+  padding-left: 19px;;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+}
+
+/* message-qa */
+.message-qa{
+  background:#ebebeb;
+  display: flex;
+  justify-content: space-between; 
+  padding: 100px 35px;
+}
+.message-qa h2{
+  font-size: 30px;
+  line-height: 1.5;
+  font-weight: bold;
+}
+.message-qa form{
+  display: flex;
+  flex-direction: column;
+}
+.message-qa input[type="submit"]{
+  width: 120px;
+  align-self: flex-end;  
+  background:#00cc99;
+  color: #fff;
+  padding: 10px 0px 10px 10px;
+  letter-spacing: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor:pointer
+}
+.message-qa form input,textarea{
+ margin-bottom: 10px ;
+ padding: 10px 20px;
+ width: 450px;
+ font-size: 20px;
+ border-radius: 5px;
+ border: 0px #fff solid; 
+}
+
